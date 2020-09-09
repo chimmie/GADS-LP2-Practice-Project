@@ -17,7 +17,7 @@ gcloud compute networks subnets create <ENTER DESIRED SUBNET NAME> \
 
 
 #create two VM instances
-#click SSH  from one instance to launch a terminal and connect.
+#click SSH button of one instance to launch a terminal and connect.
 #To test connectivity using: "ping -c 3 <ENTER INTERNAL IP ADDRESS OF ONE INSTANCE>"
 
 #to create firewall rule for network
