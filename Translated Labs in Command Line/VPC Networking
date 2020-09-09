@@ -1,0 +1,32 @@
+#In the Cloud Console, click Activate Cloud Shell (Cloud Shell).
+
+#to show existing networks using: "gcloud compute networks list"
+
+#to show Subnetwork region and range using: "gcloud compute networks subnets list"
+
+#to create VPC network using:
+gcloud compute networks create <ENTER DESIRED VPC NETWORK NAME> --subnet-mode custom
+gcloud compute networks subnets create <ENTER DESIRED SUBNET NAME> \
+      --network custom-network1 \
+      --region <ENTER DESIRED REGION> \
+      --range <ENTER DESIRED IP RANGE{"192.168.1.0/24"}> 
+
+#to delete network using: "gcloud compute networks delete <ENTER DESIRED VPC NETWORK NAME>"
+
+#to delete subnetworks using: "gcloud compute networks subnets delete <ENTER DESIRED SUBNET NAME> --region <ENTER SUBNET REGION>"
+
+
+#create two VM instances
+#click SSH  from one instance to launch a terminal and connect.
+#To test connectivity using: "ping -c 3 <ENTER INTERNAL IP ADDRESS OF ONE INSTANCE>"
+
+#to create firewall rule for network
+gcloud compute firewall-rules create <ENTER DESIRED FIREWALL RULE NAME> 
+      --direction=INGRESS(change if necessary) 
+      --priority=1000(change if necessary) 
+      --network=privatenet(change if necessary) 
+      --action=ALLOW 
+      --rules=icmp,tcp:22,tcp:3389(change if necessary) 
+      --source-ranges=0.0.0.0/0(change if necessary)
+      
+#to show list of all the firewall rules using: "gcloud compute firewall-rules list --sort-by=NETWORK"
