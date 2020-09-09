@@ -1,0 +1,16 @@
+#In the Cloud Console, click Activate Cloud Shell (Cloud Shell).
+gcloud compute instances create <ENTER DESIRED VM Instance Name> --zone <DESIRED ZONE> --machine-type=(DESIRED MACHINE TYPE)
+
+#find available zone using: "gcloud compute zones list"
+
+#find available machine type using: "gcloud compute machine-types list"
+
+#to see information about unused and used memory and swap space on your custom VM, run the following command using: "free"
+
+#to see details about the RAM installed on your VM, run the following command using: "sudo dmidecode -t"
+
+#to verify the number of processors, run the following command using: "nproc"
+
+#to see details about the CPUs installed on your VM, run the following command using: "lscpu"
+
+#to exit the SSH terminal, run the following command using: "exit"
