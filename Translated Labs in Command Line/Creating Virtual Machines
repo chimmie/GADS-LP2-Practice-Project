@@ -1,4 +1,6 @@
 #In the Cloud Console, click Activate Cloud Shell (Cloud Shell).
+
+#to create virtual machine using:
 gcloud compute instances create <ENTER DESIRED VM Instance Name> --zone <ENTER DESIRED ZONE> --machine-type=<ENTER DESIRED MACHINE TYPE>
 
 #find available zone using: "gcloud compute zones list"
